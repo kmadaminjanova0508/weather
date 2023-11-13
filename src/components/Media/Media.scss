@@ -1,0 +1,182 @@
+@import '@/assets/styles/settings/common.scss';
+
+.main {
+    &__media {
+        margin-top: 90px;
+        padding-bottom: 70px;
+    }
+    &__intro {
+        min-height: 700px;
+        position: relative;
+        overflow: hidden;
+        &-poster {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 60%;
+            object-fit: cover;
+            filter: blur(15px);
+        }
+        &-block {
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 30px 50px;
+            background: linear-gradient(90deg, #000 40%, rgba(0, 0, 0, 0.20) 60%, rgba(0, 0, 0, 0.00) 68.23%);
+        }
+        &-left {
+            width: 60%;
+            position: relative;
+            @include media(900) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &-title {
+                color: #FFF;
+                font-size: 50px;
+                font-family: Raleway;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                @include media(576) {
+                    font-size: 22px;
+                } 
+            }
+            &-text {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                color: #FFF;
+                font-size: 20px;
+                font-family: Raleway;
+                line-height: 30px;
+                margin: 25px 0;
+                @include media(576) {
+                    font-size: 16px;
+                } 
+            }
+            &-descr {
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 20px;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 30px;
+                display: flex;
+                gap: 30px;
+                margin-bottom: 100px;
+                @include media(576) {
+                    font-size: 16px;
+                } 
+            }
+        }
+        &-right {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include media(900) {
+                display: none;
+            }
+            &-img {
+                width: 311px;
+                height: 462px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+        &-actors {
+            width: 100%;
+            &-title {
+                color: #FFF;
+                font-size: 16px;
+                font-family: Raleway;
+                font-weight: 400;
+                line-height: 30px;
+                margin-bottom: 30px;
+                @include media(576) {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+            & .actors {
+                max-width: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: center;
+        gap: 78px;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            &-name {
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 22px;
+                font-weight: 700;
+            }
+            &-text {
+                color: #FFF;
+                font-family: Montserrat;
+                font-size: 20px;
+            }
+        }
+    }
+    &__rec{
+        margin-bottom: 70px;
+        &-title {
+            color: #FFF;
+            font-family: Raleway;
+            font-size: 22px;
+        }
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+            gap: 24px;
+            margin-top: 50px;
+            grid-auto-rows: 460px;
+            &-item {
+                position: relative;
+                border-radius: 10px;
+                border: 1px solid black;
+                overflow: hidden;
+                background: rgba(0, 0, 0, 0.30);
+                &-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: -2;
+                }
+                &-title {
+                    font-size: 16px;
+                    color: #FFF;
+                    position: absolute;
+                    bottom: 15px;
+                    width: 100%;
+                    text-align: center;
+                    font-family: 'Raleway';
+                }
+            }
+        }
+    }
+}

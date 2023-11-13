@@ -1,0 +1,70 @@
+@import '@/assets/styles/settings/common.scss';
+
+.main__top {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    background: #FFFFFF;
+    &-title {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: 100px;
+        @include media(800) {
+            margin-left: 15px !important;
+        }
+        & span {
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 60%;
+            color: #149A03;
+        }
+    }
+    &-swiper {
+        padding: 0 100px !important;
+        margin-top: 90px;
+        @include media(800) {
+            padding-left: 15px !important;
+            padding-right: 50px !important;
+        }
+        &-item {
+            height: 460px !important;
+            position: relative;
+            overflow: hidden;
+            background: #141414;
+            box-shadow: 0px 20px 15px -10px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            &-img {
+                height: 100%;
+                object-fit: cover;
+                width: 60%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: -2;
+            }
+            &-number {
+                height: 100%;
+                background: linear-gradient(90deg, #141414 40%, rgba(20, 20, 20, 0) 102.08%);
+                & span {
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: 'Montserrat';
+                    font-style: italic;
+                    font-weight: 700;
+                    font-size: 150px;
+                    line-height: 120%;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

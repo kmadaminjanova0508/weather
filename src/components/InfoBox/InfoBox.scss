@@ -1,0 +1,77 @@
+@import '@/assets/styles/settings/common.scss';
+
+.infobox {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    transition: 500ms;
+    @include media(800) {
+        display: none;
+    }
+    &.active {
+        height: 700px;
+    }
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: rgba(20, 20, 20, 0.7);
+        border-radius: 50%;
+        padding: 20px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    &__block {
+        height: 100%;
+        &-img {
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &-content {
+            background: linear-gradient(90deg, #000000 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 67.73%);
+            height: 100%;
+            position: relative;
+        }
+        &-info {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            padding-left: 50px;
+            &-title {
+                font-family: 'Raleway';
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 120%;
+                color: #FFFFFF;
+            }
+            &-text {
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 150%;
+                color: #FFFFFF;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 3;
+            }
+            &-descr {
+                font-family: 'Montserrat';
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 150%;
+                color: rgba(255, 255, 255, 0.6);
+                display: flex;
+                gap: 30px;
+            }
+        }
+    }
+}
